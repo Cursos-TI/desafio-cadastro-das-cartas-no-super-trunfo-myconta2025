@@ -10,7 +10,7 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
-
+    float densidade1, densidade2, pibperCapita1, pibperCapita2;
 
     //entrando com os dados da primeira carta
     printf("**Cadastro da Carta1** \n");
@@ -26,10 +26,10 @@ int main() {
     printf("Digite a população: \n");
     scanf("%d", &populacao1);
 
-    printf("Digite a área: \n");
+    printf("Digite a área (km2): \n");
     scanf("%f", &area1);
 
-    printf("Digite o PIB: \n");
+    printf("Digite o PIB (bilhões): \n");
     scanf("%f", &pib1);
 
     printf("Digite os pontos turísticos: \n");
@@ -50,14 +50,21 @@ int main() {
     printf("Digite a população: \n");
     scanf("%d", &populacao2);
 
-    printf("Digite a área: \n");
+    printf("Digite a área (km2): \n");
     scanf("%f", &area2);
 
-    printf("Digite o PIB: \n");
+    printf("Digite o PIB (bilhões): \n");
     scanf("%f", &pib2);
 
     printf("Digite os pontos turísticos: \n");
     scanf("%d", &pontosTuristicos2);
+
+    //cáculos da densidade e do PIB per capita da Carta1 e Carta2
+    densidade1 = populacao1 / area1;
+    pibperCapita1 = (pib1 * 1000000000) / populacao1;
+
+    densidade2 = populacao2 / area2;
+    pibperCapita2 = (pib2 * 1000000000) / populacao2;
 
     //exibindo os dados inseridos da primeira carta
     printf("\nCarta1: \n");
@@ -68,6 +75,8 @@ int main() {
     printf("Área: %f \n", area1);
     printf("PIB: %f \n", pib1);
     printf("Pontos turísticos: %d \n", pontosTuristicos1);
+    printf("Densidade populacional: %f \n", densidade1);
+    printf("PIB per capita: %f \n", pibperCapita1);
 
     //exibindo os dados inseridos da segunda carta
     printf("\nCarta2: \n");
@@ -78,6 +87,8 @@ int main() {
     printf("Área: %f \n", area2);
     printf("PIB: %f \n", pib2);
     printf("Pontos turísticos: %d \n", pontosTuristicos2);
+    printf("Densidade populacional: %f \n", densidade2);
+    printf("PIB per capita: %f \n", pibperCapita2);
 
     return 0;
 }
