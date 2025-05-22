@@ -62,14 +62,14 @@ int main() {
 
     //cáculos da densidade e do PIB per capita da Carta1 e Carta2
     densidade1 = populacao1 / area1;
-    pibperCapita1 = (pib1 * 1000000000) / populacao1; //PIB deve ser convertido de bilhões para reais
+    pibperCapita1 = pib1 / populacao1; 
     
     densidade2 = populacao2 / area2;
-    pibperCapita2 = (pib2 * 1000000000) / populacao2;
+    pibperCapita2 = pib2 / populacao2;
 
     //calculando o super poder da carta1 e carta2 = população + área + PIB + pontos turísticos + PIB per capita + (1/densidade)
-    superPoder1 = (float)populacao1 + area1 + (pib1 * 1000000000) + pontosTuristicos1 + pibperCapita1 + (1 / densidade1);
-    superPoder2 = (float)populacao2 + area2 + (pib2 * 1000000000) + pontosTuristicos2 + pibperCapita2 + (1 / densidade2);
+    superPoder1 = (float)populacao1 + area1 + pib1 + pontosTuristicos1 + pibperCapita1 + (1 / densidade1);
+    superPoder2 = (float)populacao2 + area2 + pib2 + pontosTuristicos2 + pibperCapita2 + (1 / densidade2);
 
     //exibindo os dados inseridos da primeira carta e o cáculo da densidade e PIB per capita
     printf("\nCarta1 \n");
